@@ -12,7 +12,7 @@ data "aws_ami" "lab" {
 }
 
 locals {
-  setup_script = <<-EOT
+  setup_script = <<EOT
 #!/bin/bash
 # To connect to your EC2 instance and install the Apache web server with PHP
 yum update -y
