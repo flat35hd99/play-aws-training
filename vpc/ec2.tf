@@ -34,7 +34,7 @@ resource "aws_instance" "public" {
   associate_public_ip_address = true
 
   # FW
-  security_groups = [
+  vpc_security_group_ids = [
     aws_security_group.lab_public.id
   ]
 
@@ -53,7 +53,7 @@ resource "aws_instance" "private" {
   subnet_id = aws_subnet.private.id
 
   # FW
-  security_groups = [
+  vpc_security_group_ids = [
     aws_security_group.lab_private.id
   ]
 
